@@ -66,3 +66,17 @@ $border: 4px solid rgb(245, 122, 0);
 .widget_btn:hover {
   border: 2px solid rgb(245, 122, 0);
 }
+
+.widget__tasks {
+  margin: 50px auto;
+  background: $bgColor;
+  color: $color;
+  height: $blockHeight;
+  width: $blockWidth;
+  border: $border;
+  border-radius: 15px;
+}
+
+.widget__task {
+  list-style-type: none;
+}

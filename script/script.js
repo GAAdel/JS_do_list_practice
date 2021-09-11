@@ -19,8 +19,14 @@ message_button.onclick = function(){
 };
 
 function displayMessages() {
+  let pool_message = '';
   mas.forEach(function(elem, index){
-    console.log(elem);
+    pool_message += `
+    <li>
+      <input type="checkbox">
+      <label>${elem.task}</label>
+    </li>
+    `;
+    tasks_todo.innerHTML = pool_message;
   });
 }
-   

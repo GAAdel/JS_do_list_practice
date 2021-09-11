@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My_to_DO_list</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header></header>
@@ -16,11 +20,13 @@
           <img class="widget__title_img" src="./img/logo.jpg" alt="logo" />
         </div>
         <input type="text" placeholder="Описание дела" class="widget_input" />
-        <button onclick="alert('Клик!')" class="btn widget_btn">
-          Добавить
-        </button>
+        <button class="btn widget_btn">Добавить</button>
+        <div class="widget__tasks">
+          <ul class="widget__task"></ul>
+        </div>
       </div>
     </main>
     <footer></footer>
+    <script src="./script/script.js"></script>
   </body>
 </html>

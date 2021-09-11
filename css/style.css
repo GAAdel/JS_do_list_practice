@@ -1,16 +1,18 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .widget__wrapper {
   margin: 50px auto;
   padding: 20px 20px;
-  background: rgba(20, 19, 19, 0.87);
+  background: rgba(59, 58, 58, 0.87);
   color: #cccccc;
   height: 200px;
   width: 400px;
-  border: 4px solid #faa019;
+  border: 4px solid #f57a00;
+  border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,6 +26,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .widget__title_text {
@@ -36,4 +41,31 @@
   max-height: 40px;
   border-radius: 100px;
   margin-left: 20px;
+}
+
+.widget_input {
+  margin-bottom: 20px;
+  padding: 8px 10px 8px 10px;
+  border-radius: 15px;
+  border: 0;
+  outline: none;
+}
+
+.btn {
+  padding: 8px 10px 8px 10px;
+  border-radius: 15px;
+  border: 0;
+  color: #cccccc;
+}
+
+.widget_btn {
+  width: 50%;
+  margin: 50px auto;
+  background-color: #161616;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.widget_btn:hover {
+  border: 2px solid #f57a00;
 }

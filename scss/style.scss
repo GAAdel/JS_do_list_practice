@@ -1,13 +1,14 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-$bgColor: rgba(20, 19, 19, 0.87);
+$bgColor: rgba(59, 58, 58, 0.87);
 $color: #cccccc;
 $blockWidth: 400px;
 $blockHeight: 200px;
-$border: 4px solid rgb(250, 160, 25);
+$border: 4px solid rgb(245, 122, 0);
 
 .widget__wrapper {
   margin: 50px auto;
@@ -17,12 +18,14 @@ $border: 4px solid rgb(250, 160, 25);
   height: $blockHeight;
   width: $blockWidth;
   border: $border;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
 }
 
 .widget__title {
   display: flex;
+  justify-content: space-between;
 }
 
 .widget__title_text {
@@ -35,4 +38,31 @@ $border: 4px solid rgb(250, 160, 25);
   max-height: 40px;
   border-radius: 100px;
   margin-left: 20px;
+}
+
+.widget_input {
+  margin-bottom: 20px;
+  padding: 8px 10px 8px 10px;
+  border-radius: 15px;
+  border: 0;
+  outline: none;
+}
+
+.btn {
+  padding: 8px 10px 8px 10px;
+  border-radius: 15px;
+  border: 0;
+  color: $color;
+}
+
+.widget_btn {
+  width: 50%;
+  margin: 50px auto;
+  background-color: rgb(22, 22, 22);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.widget_btn:hover {
+  border: 2px solid rgb(245, 122, 0);
 }

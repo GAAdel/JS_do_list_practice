@@ -13,8 +13,14 @@ message_button.onclick = function(){
   };
 
   mas.push(new_task);
-  console.log(mas);
   message_input.value = "";
+  displayMessages();
 
 };
+
+function displayMessages() {
+  mas.forEach(function(elem, index){
+    console.log(elem);
+  });
+}
    

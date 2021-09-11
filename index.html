@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My_to_DO_list</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header></header>
     <main>
-      <h1>CiKaDA_to_Do_List</h1>
-      <input type="text" placeholder="Описание дела" />
-      <button>Добаить</button>
+      <div class="widget__wrapper">
+        <div class="widget__title">
+          <h1 class="widget__title_text">CiKaDA_to_Do_List</h1>
+          <img class="widget__title_img" src="./img/logo.jpg" alt="logo" />
+        </div>
+        <input type="text" placeholder="Описание дела" class="widget_input" />
+        <button onclick="alert('Клик!')" class="btn widget_btn">
+          Добавить
+        </button>
+      </div>
     </main>
     <footer></footer>
   </body>

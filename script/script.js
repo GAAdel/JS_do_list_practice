@@ -25,14 +25,19 @@ message_button.onclick = function(){
 
 
 // смотрим на параметр checked и добавляем атрибут checked к input
+// смотрим на парамет important и добавляем класс important
 
 function displayMessages() {
   let pool_message = '';
+  if (mas.length === 0) {
+    tasks_todo.innerHTML = '';
+  };
   mas.forEach(function(elem, index){         // принимает параметром callback функцию. Функция принимает 3 аргумента (1 - сам элемент, 2 - индекс, 3 - сам массив)
     pool_message += `
     <li>
       <input type="checkbox" id="item_${index}" ${elem.checked ? 'checked' : ''}> 
-      <label for="item_${index}">${elem.task}</label>
+      <label for="item_${index}" class="${elem.important ? 'important' : ''}">${elem.task}</label>
+      <button id="item_${index}">Удалить дело</button>
     </li>
     `;
     tasks_todo.innerHTML = pool_message;
@@ -52,4 +57,14 @@ tasks_todo.onchange = function(event) {
       localStorage.setItem('tasks_todo', JSON.stringify(mas));
     };
   });
+}
+
+tasks_todo.onclick = function(event) {
+  let idButton = event.target.getAttribute('id');
+  console.log(idButton);
+  console.log(mas);
+
+  // mas.splice(idButton, 1);
+  // displayMessages();
+  // localStorage.setItem('tasks_todo', JSON.stringify(mas));
 }

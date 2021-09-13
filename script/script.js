@@ -37,7 +37,7 @@ function displayMessages() {
     <li>
       <input type="checkbox" id="item_${index}" ${elem.checked ? 'checked' : ''}> 
       <label for="item_${index}" class="${elem.important ? 'important' : ''}">${elem.task}</label>
-      <button id="item_${index}">Удалить дело</button>
+      <button id="item_btn_${index}" class="">Удалить дело</button>
     </li>
     `;
     tasks_todo.innerHTML = pool_message;
@@ -61,10 +61,10 @@ tasks_todo.onchange = function(event) {
 
 tasks_todo.onclick = function(event) {
   let idButton = event.target.getAttribute('id');
-  console.log(idButton);
-  console.log(mas);
-
-  // mas.splice(idButton, 1);
-  // displayMessages();
-  // localStorage.setItem('tasks_todo', JSON.stringify(mas));
+  if (idButton.includes("btn")) {
+    let idButton_index = idButton.replace(/item_btn_/gi, '');
+    mas.splice(idButton_index, 1);
+    displayMessages();
+    localStorage.setItem('tasks_todo', JSON.stringify(mas)); 
+  };           
 }

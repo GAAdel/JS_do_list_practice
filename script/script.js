@@ -37,7 +37,7 @@ function displayMessages() {
     <li>
       <input type="checkbox" id="item_${index}" ${elem.checked ? 'checked' : ''}> 
       <label for="item_${index}" class="${elem.important ? 'important' : ''}">${elem.task}</label>
-      <button id="item_btn_${index}" class="">Удалить дело</button>
+      <button id="item_btn_${index}" class="btn delete_btn">Удалить дело</button>
     </li>
     `;
     tasks_todo.innerHTML = pool_message;

@@ -9,7 +9,7 @@ if (localStorage.getItem('tasks_todo')) {                      //получае�
 }
 
 message_button.onclick = function(){
-  
+  if (!message_input.value) return;
   let new_task = {
     task: message_input.value,
     checked: false,
@@ -56,6 +56,17 @@ tasks_todo.onchange = function(event) {
       elem.checked = !elem.checked;
       localStorage.setItem('tasks_todo', JSON.stringify(mas));
     };
+  });
+}
+
+tasks_todo.oncontextmenu =  function(event) {
+  event.preventDefault();
+  mas.forEach(function(elem) {
+    if (elem.task === event.target.innerHTML) {
+      elem.important = !elem.important;
+      displayMessages();
+      localStorage.setItem('tasks_todo', JSON.stringify(mas));
+    }
   });
 }
 

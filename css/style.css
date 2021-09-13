@@ -69,13 +69,18 @@
   border: 2px solid #f57a00;
 }
 
+.widget_info {
+  margin: 10px auto 15px auto;
+  font-size: 12px;
+}
+
 .widget__task {
   list-style-type: none;
 }
 
 .important {
   font-weight: 700;
-  color: red;
+  color: #19ff11;
 }
 
 label {

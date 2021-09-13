@@ -59,7 +59,7 @@
 
 .widget_btn {
   width: 50%;
-  margin: 0px auto;
+  margin: 10px auto;
   background-color: #161616;
   font-size: 15px;
   font-weight: 700;
@@ -69,15 +69,35 @@
   border: 2px solid #f57a00;
 }
 
+.widget_info {
+  margin: 10px auto 15px auto;
+  font-size: 12px;
+}
+
 .widget__task {
   list-style-type: none;
 }
 
 .important {
   font-weight: 700;
-  color: red;
+  color: #19ff11;
 }
 
 label {
   cursor: pointer;
+}
+
+.delete_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 8px 4px 8px;
+  margin: 5px auto;
+  color: rgba(255, 255, 255, 0.842);
+  background-color: rgba(255, 2, 2, 0.795);
+  font-size: 13px;
+}
+
+.delete_btn:hover {
+  border: 2px solid black;
 }
